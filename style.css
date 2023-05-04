@@ -79,7 +79,7 @@ html {
     display: flex;
     background-color: #111;
     font-family: 'Ubuntu', sans-serif;
-    height: 100vh;
+    height: 90vh;
     min-height: 500px;
     font-family: 'Ubuntu', sans-serif;
 }
@@ -176,16 +176,6 @@ section .title {
     position: relative;
 }
 
-section .title::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 180px;
-    height: 3px;
-    background: #111;
-    transform: translateX(-50%);
-}
 
 section .title::after {
     position: absolute;
@@ -219,9 +209,7 @@ footer {
 
 /*  sessão sobre  */
 
-.about .title::after {
-    content: "Quem sou eu";
-}
+
 
 .about .about-content .left {
     width: 45%;
@@ -274,7 +262,9 @@ footer {
     border-radius: 50%;
 }
 
-
+.about .title {
+    color: #AA77A2;
+}
 
 
 /*  sessão serviços */
@@ -289,11 +279,7 @@ footer {
     background: #fff;
 }
 
-.services .title::after,
-.teams .title::after {
-    background: #111;
-    content: "Que ofereço";
-}
+
 
 .services .serv-content .card {
     width: calc(33% - 20px);
@@ -335,6 +321,7 @@ footer {
 .card {
     margin: 10px 10px 10px 10px;
 }
+
 
 /*  sessão especialidades  */
 .skills .title::after {
@@ -420,44 +407,92 @@ footer {
     width: 47%;
 }
 
+
+
 /*  sessão projetos  */
-.teams .title::after {
-    content: "Meus projetos";
+
+.projetos {
+    background: #111;
+    font-family: 'Roboto', sans-serif
 }
 
-/* Estilização dos botões */
-.btn {
-    background-color: #fff;
-    border: 2px solid #333;
-    border-radius: 30px;
-    color: #333;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: bold;
-    padding: 10px 20px;
-    margin-top: 20px;
-    transition: all 0.3s ease-in-out;
-}
-
-.btn:hover {
-    background-color: #333;
+.projetos .title {
     color: #fff;
 }
 
-.prev-btn,
-.next-btn {
-    flex: 0 0 auto;
-    margin: 10px 10px;
+.projetos .card h2,
+p {
+    text-align: center;
 }
 
 
+.projetos .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.projetos .card {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(255, 219, 219, 0.3);
+    transition: transform 0.3s ease-in-out;
+    color: #ccc;
+    background: #222;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.projetos .card:hover {
+    transform: translateY(-19px);
+}
+
+.projetos .card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.projetos .card p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+
+.projetos .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #AA77A2;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+    margin-bottom: 10px;
+
+}
+
+.projetos .btn:hover {
+    background-color: #ccc;
+    color: #AA77A2;
+}
+
+/* Estilização para dispositivos móveis */
+@media only screen and (max-width: 768px) {
+    .projetos .card {
+        width: 100%;
+        margin: 10px 0 30px 0;
+    }
+}
 
 
 
 /*  sessão Contato  */
-.contact .title::after {
-    content: "Fale conosco";
-}
+
 
 .contact .contact-content .column {
     width: calc(50% - 30px);
@@ -522,6 +557,10 @@ footer {
 .sub-title a {
     color: #111;
 
+}
+
+.contact .title {
+    color: #AA77A2;
 }
 
 

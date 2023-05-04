@@ -38,24 +38,3 @@ $(document).ready(function () {
 
 
 
-
-$(document).ready(function(){
-    $('.carousel').slick({
-      slidesToShow: 2, // define o número de itens a serem exibidos por slide
-      slidesToScroll: 2, // define o número de itens a serem percorridos por slide
-      dots: true, // exibe os pontos de navegação
-      arrows: false, // esconde as setas de navegação
-      responsive: [
-        {
-          breakpoint: 768, // define a largura da tela em que as configurações abaixo devem ser aplicadas
-          settings: {
-            slidesToShow: 1, // define o número de itens a serem exibidos por slide
-            slidesToScroll: 1 // define o número de itens a serem percorridos por slide
-          }
-        }
-      ]
-    });
-  });
-  
-
-
